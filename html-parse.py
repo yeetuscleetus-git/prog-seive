@@ -10,7 +10,7 @@ class HTMLSeive:
 	def find(tag,line): 
 		file_content = open(HTMLSeive.file_name,"r").read()
 		file_content = file_content.split("\n")
-		l = file_content[line-1]
+		l = file_content[int(line)-1]
 		if tag not in l:
 			raise NotFoundError("Tag {tag} not found on line {str(line)} of {HTMLSeive.file_name}")
 		else:
@@ -26,7 +26,7 @@ class HTMLSeive:
 				listOfFoundTags.append(line)
 			else:continue
 		if len(ListofFoundTags) =< 0:
-			raise NotFoundError("Tag {tag} not found in {HTMLSeive.file_name")
+			raise NotFoundError("Tag {tag} not found in {HTMLSeive.file_name}")
 		else:
 			for x in listOfFoundTags:
 				print(x)
