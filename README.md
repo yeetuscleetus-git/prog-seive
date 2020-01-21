@@ -1,2 +1,2 @@
 # prog-seive
-Finds chunks of code that user requests.
+Finds chunks of code that user requests in HTML.
